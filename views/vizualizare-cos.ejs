@@ -1,0 +1,23 @@
+<h2>Vizualizare cos</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nume Produs</th>
+        
+        </tr>
+        <%if(produs.length>0){%>
+            <% var i %>
+            <% for (i=0;i<produs.length;i++){%>
+           
+        <tr>
+           <td><%= i %></td>
+            <td><%=produs[i]%></td>
+        </tr>
+    <% } %>
+        <% } else{ %>
+        <tr>
+             <td colspan="7">No Data Found</td>
+        </tr>
+        <% } %>
+
+</table>

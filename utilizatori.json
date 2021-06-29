@@ -1,0 +1,43 @@
+[
+    {
+        "user": "emaftei@icloud.com",
+        "pwd": "1234567890",
+        "nume": "Maftei",
+        "prenume":"Elena",
+        "varsta": 21,
+        "admin": "true"
+
+    },
+    {
+        "user": "pop@tuiasi.ro",
+        "pwd": "1234512345",
+        "nume": "Popescu",
+        "prenume": "Ion",
+        "varsta": 35,
+        "admin" : "true"
+    },
+    {
+        "user": "ana@gmail.com",
+        "pwd": "123123123",
+        "nume": "Amarandei",
+        "prenume": "Ana",
+        "varsta": 27,
+        "admin": "false"
+    },
+    {
+        "user": "maria@yahoo.com",
+        "pwd": "0987654321",
+        "nume": "Ion",
+        "prenume": "Maria",
+        "varsta": 53,
+        "admin": "false"
+    },
+    {
+        "user": "bflorea@gmail.com",
+        "pwd": "567890098765",
+        "nume": "Florea",
+        "prenume": "Bianca",
+        "varsta": 39,
+        "admin":"false"
+    }
+]

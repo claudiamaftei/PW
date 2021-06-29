@@ -1,0 +1,19 @@
+<section>
+    <% 
+    let count =0;
+    let i =0;
+    for(key in rasp){
+        if(rasp[key] == intrebari[i].corect) count ++;
+        i++;
+    }%>
+    <p> nr de rasp este:</p><%- count%></p></br>
+    <%
+        if(userSession != undefined)
+        {
+        %>
+        <p>Logat ca </p><%- userSession%><p></p>
+        <%
+        }
+    %>
+</section>
+

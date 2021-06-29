@@ -1,0 +1,23 @@
+<section>
+<form action="/verificare-autentificare" method="post">
+  <% if(user == 'messageError')
+  {
+    %>
+    <p> <%- user%>!</p>
+  <%}
+%>
+  <label for="user">User:</label>
+  <input type="email" id="id_user" name="user"><br><br>
+  <label for="pwd">Password:</label>
+  <input type="password" id="id_pwd" name="pwd" minlength="8"><br><br>
+  <input class="submit" type="submit" value="Autentificare"/>
+  <%
+    if(userSession != undefined)
+    {
+  %>
+    <p>Logat ca </p><%- userSession%><p></p>
+  <%
+    }
+  %>
+</form>
+</section>

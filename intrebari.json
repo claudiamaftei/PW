@@ -1,0 +1,32 @@
+[
+{
+    "intrebare": "1. Care este tipul cafelei?",
+    "variante": ["Espresso", "Cappuccino", "Moccacino", "Dark Fantasy"],
+    "corect": 3
+},
+{
+    "intrebare": "2. Cat zahar sa contina cafeaua?",
+    "variante": ["fara zahar", "1/2 lingurita zahar", "o lingurita zahar", "2 lingurite zahar"],
+    "corect": 0
+},
+{
+    "intrebare": "3. Cu sau fara lapte?",
+    "variante": ["fara lapte ", "putin lapte", "portie medie de lapte", "mult lapte"],
+    "corect": 1
+},
+{
+    "intrebare": "4. De care cafea?",
+    "variante": ["mica ", "medie", "mare", "extra"],
+    "corect": 2
+},
+{
+    "intrebare": "5. La ce temperatura?",
+    "variante": ["fierbinte ", "rece", "cu gheata"],
+    "corect": 2
+},
+{
+    "intrebare": "6. Aici sau la pachet?",
+    "variante": ["aici ", "la pachet"],
+    "corect": 0
+}
+]

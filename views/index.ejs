@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Cafenea</title>
+</head>
+<p> Bine ai venit,</p> <%- user%><p></p>
+<body link="gren" vlink="blue" alink="yellow">
+<a href="autentificare">Autentificare</a>
+<form action="/delogare" method="post">
+<%
+if(userSession != undefined)
+{
+    %>
+    <input class="submit" type="submit" value="Delogare"/>
+    <%
+}
+
+%>
+
+</form>
+<form action="/creare-bd" method="get">
+<p>
+    <input class="submit" type="submit" value="Creare BD"/>
+</p>
+</form>
+
+
+
+<% if(admin == "true"){%>
+    <form action="/admin" method="get">
+        <button>Admin</button>
+    </form>
+<%}%>
+
+
+
+
+<form action="/afisare-bd" method="get">
+    <p>
+        <input class="submit" type="submit" value="Afisare BD"/>
+    </p>
+    
+<table >
+    <tr>
+        <th>Id produs</th>
+        <th>Nume</th>
+        <th>Zahar</th>
+        <th>Lapte</th>
+        <th>Dimensiune</th>
+        <th>Temperatura</th>
+        <th>Loc</th>
+        </tr>
+        <%if(produs.length!=0){%>
+            <%   for(result in produs){%>
+            <tr>
+            <td><%=produs[result].id; %></td>
+            <td><%=produs[result].nume; %></td>
+            <td><%=produs[result].zahar; %></td>
+            <td><%=produs[result].lapte; %></td>
+            <td><%=produs[result].dimensiune; %></td>
+            <td><%=produs[result].temperatura; %></td>
+            <td><%=produs[result].loc; %></td>
+            <td><form action="/adaugare_cos" method="POST">
+                <%
+                if(userSession != undefined)
+                {
+                %>
+                <input type="hidden" name="id" value="<%-produs[result].id %>">
+                <button>Adauga in cos</button>
+                <%
+                    }
+                %>
+            </form></td>  
+            </tr>
+            <% } %>
+        <% } %>
+            
+        
+    </tr>
+
+</table>
+</form>
+<form action="/vizualizare-cos" method="get">
+    <p>
+        <input class="submit" type="submit" value="Vizualizare-cos"/>
+    </p>
+    </form>
+<p></p>
+<%
+    if(userSession != undefined)
+    {
+    %>
+    <p>Logat ca </p><%- userSession%><p></p>
+    <%
+    }
+%>
+<p></p>
+
+
+</body>
+</html>

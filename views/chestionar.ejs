@@ -1,0 +1,21 @@
+<section>
+    <form action="/rezultat-chestionar" method="post">
+        <% for(let i=0;i<intrebari.length;i++) {%>
+            <label><%- intrebari[i].intrebare%><br><br></label> 
+            <% for(let j=0;j<intrebari[i].variante.length;j++){%> 
+                <input class ="intrebare" type="radio" name="q<%- i%>" value="<%-j%>"/><%- intrebari[i].variante[j]%><br></br>
+            <% }
+            
+        }%>
+        
+        <input class="submit" type="submit" value="Trimite"/>
+        <%
+            if(userSession != undefined)
+            {
+            %>
+                <p>Logat ca </p><%- userSession%><p></p>
+            <%
+            }
+        %>
+    </form>
+</section>
